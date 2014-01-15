@@ -15,13 +15,15 @@ class ArtifactoryReader extends BaseReader
         $this->rfs = $rfs;
     }
     
-    
     public function readRepositories($url)
     {
+        // @todo move this into a config
         $repoLocations = array(
             // '/app-snapshot-local/php/' => 'release',
             '/app-release-local/php/' => 'dev',
-            '/plugins-release-local/php/' => 'dev'
+            '/plugins-release-local/php/' => 'dev',
+            '/ext-release-local/php/' => 'dev',
+            '/libs-release-local/php/' => 'dev',
             
         );
         
